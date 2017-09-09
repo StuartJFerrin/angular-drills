@@ -1,5 +1,22 @@
 <html ng-app="apiApp">
-	<body>
+	<body ng-controller="apiController">
+
+	<div>
+			<input type="text" ng-model="type" placeholder="Type">
+			<button ng-click="getType(type)">
+				Submit
+			</button>
+		</div>
+		<div>
+			<div> Search Results </div>
+	
+<div ng-repeat="pokemon in pokeData">
+{{pokemon.name}}
+
+</div>
+<!--{{pokeData}}-->
+
+		</div>
 		
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
